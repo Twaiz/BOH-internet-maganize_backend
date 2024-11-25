@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import { NextFunction, Response, Request } from 'express';
 import { AppError } from '../Utils';
 
 interface ErrorWithDetails extends Error {
@@ -67,7 +67,13 @@ const sendErrorProd = (res: Response, error: AppError): void => {
   }
 };
 
-export = (error: ErrorWithDetails, res: Response): void => {
+export const globalErrorHandler = (
+  error: ErrorWithDetails,
+  _req: Request,
+  res: Response,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  _next: NextFunction,
+): void => {
   error.statusCode = error.statusCode || 500;
   error.status = error.status || 'error';
 
