@@ -4,19 +4,19 @@ import morgan from 'morgan';
 
 import { AppError } from './Utils';
 import { globalErrorHandler } from './Controllers';
-// import { catalogRoute } from './Routes';
+import { catalogRoute } from './Routes';
 
 const app = express();
 
 // //?Varibles?\\
-// const URL_CATALOG = '/api/v1/catalog';
+const URL_CATALOG = '/api/v1/catalog';
 
 //?Middlewares?\\
 app.use(express.json());
 app.use(morgan('dev'));
 
 // //?Routes?\\
-// app.use(URL_CATALOG, catalogRoute);
+app.use(URL_CATALOG, catalogRoute);
 
 //?Error Handling -> Not Found Route?\\
 app.all('*', (req, _res, next) => {
