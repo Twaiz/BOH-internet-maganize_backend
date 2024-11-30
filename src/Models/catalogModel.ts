@@ -1,9 +1,36 @@
 import mongoose, { Schema } from 'mongoose';
 
+type CategoryType =
+  | 'onTheWall'
+  | 'stationaryOnWheels'
+  | 'recruitment'
+  | 'inverters'
+  | 'solarPanels'
+  | 'switching'
+  | 'components'
+  | 'portableChargingStations'
+  | 'energyStorageSystems';
+
 interface IParams {
   capacity: string;
   current: string;
   voltage: string;
+  power: string;
+  phase: string;
+  mppt: string;
+  weight: string;
+  amperage: string;
+  size: string;
+  length: string;
+  standard: string;
+  other: string;
+  ip: string;
+  stacking: string;
+  quantity: string;
+  strength: string;
+  mobility: string;
+  portability: string;
+  dimensions: string;
 }
 
 interface IDocumentation {
@@ -18,16 +45,17 @@ interface ICatalog {
   params: IParams;
   documentation: IDocumentation[];
   price: string;
+  category: CategoryType;
 }
 
 const documentationSchema = new Schema<IDocumentation>({
   name: {
     type: String,
-    required: true,
+    required: [true, 'Product documention must have name'],
   },
   link: {
     type: String,
-    required: true,
+    required: [true, 'Product documention must have link'],
     validate: {
       validator: function (value: string) {
         try {
@@ -46,15 +74,60 @@ const documentationSchema = new Schema<IDocumentation>({
 const paramsSchema = new Schema<IParams>({
   capacity: {
     type: String,
-    required: true,
   },
   current: {
     type: String,
-    required: true,
   },
   voltage: {
     type: String,
-    required: true,
+  },
+  power: {
+    type: String,
+  },
+  phase: {
+    type: String,
+  },
+  mppt: {
+    type: String,
+  },
+  weight: {
+    type: String,
+  },
+  amperage: {
+    type: String,
+  },
+  size: {
+    type: String,
+  },
+  length: {
+    type: String,
+  },
+  standard: {
+    type: String,
+  },
+  other: {
+    type: String,
+  },
+  ip: {
+    type: String,
+  },
+  stacking: {
+    type: String,
+  },
+  quantity: {
+    type: String,
+  },
+  strength: {
+    type: String,
+  },
+  mobility: {
+    type: String,
+  },
+  portability: {
+    type: String,
+  },
+  dimensions: {
+    type: String,
   },
 });
 
@@ -62,12 +135,11 @@ const catalogSchema = new Schema<ICatalog>(
   {
     title: {
       type: String,
-      required: [true, 'Title is required'],
+      required: [true, 'Product must have title'],
       unique: true,
     },
     image: {
       type: String,
-      required: false,
     },
     hit: {
       type: Boolean,
@@ -75,7 +147,7 @@ const catalogSchema = new Schema<ICatalog>(
     },
     params: {
       type: paramsSchema,
-      required: true,
+      required: [true, 'Product must have params'],
     },
     documentation: {
       type: [documentationSchema],
@@ -83,16 +155,29 @@ const catalogSchema = new Schema<ICatalog>(
     },
     price: {
       type: String,
-      required: true,
+      required: [true, 'Product must have price'],
+      min: 0,
+    },
+    category: {
+      type: String,
+      required: [true, 'Product must have category'],
+      enum: [
+        'onTheWall',
+        'stationaryOnWheels',
+        'recruitment',
+        'inverters',
+        'solarPanels',
+        'switching',
+        'components',
+        'portableChargingStations',
+        'energyStorageSystems',
+      ],
     },
   },
   {
     timestamps: true,
   },
 );
-
-catalogSchema.index({ title: 1 });
-catalogSchema.index({ price: 1 });
 
 const Catalog = mongoose.model('Catalog', catalogSchema);
 
