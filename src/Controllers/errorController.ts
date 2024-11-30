@@ -77,9 +77,9 @@ export const globalErrorHandler = (
   error.statusCode = error.statusCode || 500;
   error.status = error.status || 'error';
 
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env['NODE_ENV'] === 'development') {
     sendErrorDev(res, error as AppError);
-  } else if (process.env.NODE_ENV === 'production') {
+  } else if (process.env['NODE_ENV'] === 'production') {
     let errorInstance: ErrorWithDetails = {
       ...error,
       name: error.name,
