@@ -1,36 +1,19 @@
 import mongoose, { Schema } from 'mongoose';
 
-type CategoryType =
-  | 'onTheWall'
-  | 'stationaryOnWheels'
-  | 'recruitment'
-  | 'inverters'
-  | 'solarPanels'
-  | 'switching'
-  | 'components'
-  | 'portableChargingStations'
-  | 'energyStorageSystems';
+enum CategoryType {
+  ON_THE_WALL = 'onTheWall',
+  STATIONARY_ON_WHEELS = 'stationaryOnWheels',
+  RECRUITMENT = 'recruitment',
+  INVERTERS = 'inverters',
+  SOLAR_PANELS = 'solarPanels',
+  SWITCHING = 'switching',
+  COMPONENTS = 'components',
+  PORTABLE_CHARGING_STATIONS = 'portableChargingStations',
+  ENERGY_STORAGE_SYSTEMS = 'energyStorageSystems',
+}
 
 interface IParams {
-  capacity: string;
-  current: string;
-  voltage: string;
-  power: string;
-  phase: string;
-  mppt: string;
-  weight: string;
-  amperage: string;
-  size: string;
-  length: string;
-  standard: string;
-  other: string;
-  ip: string;
-  stacking: string;
-  quantity: string;
-  strength: string;
-  mobility: string;
-  portability: string;
-  dimensions: string;
+  [key: string]: string; //? Подразумевается, что тут всегда будет string! ?\\
 }
 
 interface IDocumentation {
@@ -49,20 +32,16 @@ interface ICatalog {
 }
 
 const documentationSchema = new Schema<IDocumentation>({
-  name: {
-    type: String,
-    required: [true, 'Product documention must have name'],
-  },
+  name: { type: String, required: true },
   link: {
     type: String,
-    required: [true, 'Product documention must have link'],
+    required: true,
     validate: {
-      validator: function (value: string) {
+      validator: (value: string) => {
         try {
           new URL(value);
           return true;
-        } catch (err) {
-          console.log(err);
+        } catch {
           return false;
         }
       },
@@ -71,114 +50,25 @@ const documentationSchema = new Schema<IDocumentation>({
   },
 });
 
-const paramsSchema = new Schema<IParams>({
-  capacity: {
-    type: String,
-  },
-  current: {
-    type: String,
-  },
-  voltage: {
-    type: String,
-  },
-  power: {
-    type: String,
-  },
-  phase: {
-    type: String,
-  },
-  mppt: {
-    type: String,
-  },
-  weight: {
-    type: String,
-  },
-  amperage: {
-    type: String,
-  },
-  size: {
-    type: String,
-  },
-  length: {
-    type: String,
-  },
-  standard: {
-    type: String,
-  },
-  other: {
-    type: String,
-  },
-  ip: {
-    type: String,
-  },
-  stacking: {
-    type: String,
-  },
-  quantity: {
-    type: String,
-  },
-  strength: {
-    type: String,
-  },
-  mobility: {
-    type: String,
-  },
-  portability: {
-    type: String,
-  },
-  dimensions: {
-    type: String,
-  },
-});
+const paramsSchema = new Schema<IParams>({}, { _id: false });
 
 const catalogSchema = new Schema<ICatalog>(
   {
-    title: {
-      type: String,
-      required: [true, 'Product must have title'],
-      unique: true,
-    },
-    image: {
-      type: String,
-    },
-    hit: {
-      type: Boolean,
-      default: false,
-    },
-    params: {
-      type: paramsSchema,
-      required: [true, 'Product must have params'],
-    },
-    documentation: {
-      type: [documentationSchema],
-      default: [],
-    },
-    price: {
-      type: String,
-      required: [true, 'Product must have price'],
-      min: 0,
-    },
+    title: { type: String, required: true, unique: true },
+    image: { type: String },
+    hit: { type: Boolean, default: false },
+    params: { type: paramsSchema, required: true },
+    documentation: { type: [documentationSchema], default: [] },
+    price: { type: String, required: true, min: 0 },
     category: {
       type: String,
-      required: [true, 'Product must have category'],
-      enum: [
-        'onTheWall',
-        'stationaryOnWheels',
-        'recruitment',
-        'inverters',
-        'solarPanels',
-        'switching',
-        'components',
-        'portableChargingStations',
-        'energyStorageSystems',
-      ],
+      required: true,
+      enum: Object.values(CategoryType),
     },
   },
-  {
-    timestamps: true,
-  },
+  { timestamps: true },
 );
 
-const Catalog = mongoose.model('Catalog', catalogSchema);
+const Catalog = mongoose.model<ICatalog>('Catalog', catalogSchema);
 
-export { Catalog };
+export { Catalog, CategoryType };
