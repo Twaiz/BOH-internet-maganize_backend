@@ -1,1 +1,1 @@
-export {} from './errorController';
+export { globalErrorHandler } from './errorController';
