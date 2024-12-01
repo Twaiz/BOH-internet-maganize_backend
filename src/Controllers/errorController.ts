@@ -67,6 +67,8 @@ const sendErrorProd = (res: Response, error: AppError): void => {
   }
 };
 
+const variableNodeENV = process.env['NODE_ENV'];
+
 export const globalErrorHandler = (
   error: ErrorWithDetails,
   _req: Request,
@@ -77,9 +79,9 @@ export const globalErrorHandler = (
   error.statusCode = error.statusCode || 500;
   error.status = error.status || 'error';
 
-  if (process.env['NODE_ENV'] === 'development') {
+  if (variableNodeENV === 'development') {
     sendErrorDev(res, error as AppError);
-  } else if (process.env['NODE_ENV'] === 'production') {
+  } else if (variableNodeENV === 'production') {
     let errorInstance: ErrorWithDetails = {
       ...error,
       name: error.name,
