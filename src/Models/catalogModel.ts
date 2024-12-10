@@ -27,7 +27,8 @@ interface ICatalog {
   hit: boolean;
   params: IParams;
   documentation: IDocumentation[];
-  price: string;
+  price: number;
+  currency: string;
   category: CategoryType;
 }
 
@@ -59,7 +60,8 @@ const catalogSchema = new Schema<ICatalog>(
     hit: { type: Boolean, default: false },
     params: { type: paramsSchema, required: true },
     documentation: { type: [documentationSchema], default: [] },
-    price: { type: String, required: true, min: 0 },
+    price: { type: Number, required: true, min: 0 },
+    currency: { type: String, required: true },
     category: {
       type: String,
       required: true,
