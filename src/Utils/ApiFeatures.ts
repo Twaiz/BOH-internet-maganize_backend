@@ -27,6 +27,20 @@ class ApiFeatures {
 
     return this;
   }
+
+  sort() {
+    if (this.queryParametrs) {
+      const sortBy = this.queryParametrs['sort']
+        ?.toString()
+        .split(',')
+        .join(' ');
+
+      this.queryValue = this.queryValue.sort(sortBy);
+      return this;
+    }
+
+    return this;
+  }
 }
 
 export { ApiFeatures };

@@ -6,7 +6,7 @@ import { ApiFeatures, catchAsync } from '../Utils';
 
 //? Get Catalogs *with Features* ?\\
 const getCatalogs = catchAsync(async (req, res) => {
-  const features = new ApiFeatures(Catalog.find(), req.query).filter();
+  const features = new ApiFeatures(Catalog.find(), req.query).filter().sort();
   const catalogs = await features.queryValue;
 
   res.status(200).json({
