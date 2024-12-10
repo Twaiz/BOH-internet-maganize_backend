@@ -29,7 +29,7 @@ class ApiFeatures {
   }
 
   sort() {
-    if (this.queryParametrs) {
+    if (this.queryParametrs['sort']) {
       const sortBy = this.queryParametrs['sort']
         ?.toString()
         .split(',')
