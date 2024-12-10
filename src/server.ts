@@ -23,7 +23,7 @@ mongoose
 
 //*====================================================================?*\\
 import { app } from './app';
-import { ImportDataToDb } from './data/ImportDataToDB';
+// import { ImportDataToDb } from './data/ImportDataToDB';
 
 const processEnvPORT = process.env['PORT'];
 const PORT = processEnvPORT ? processEnvPORT : 3000;
@@ -31,7 +31,7 @@ const server = app.listen(PORT, () => {
   console.log(`App running on port ${PORT}`);
 });
 
-ImportDataToDb();
+// ImportDataToDb();
 
 process.on('unhandledRejection', (error: unknown) => {
   console.log('UNHANDLER REJECTION! 💥 Shutting down...');
