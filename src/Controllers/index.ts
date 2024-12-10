@@ -1,1 +1,2 @@
-export {} from './errorController';
+export { globalErrorHandler } from './errorController';
+export { getCatalogs } from './catalogController';
