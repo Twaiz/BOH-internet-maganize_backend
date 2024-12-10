@@ -41,6 +41,20 @@ class ApiFeatures {
 
     return this;
   }
+
+  fields() {
+    if (this.queryParametrs['fields']) {
+      const queryStr = this.queryParametrs['fields']
+        .toString()
+        .split(',')
+        .join(' ');
+      this.queryValue = this.queryValue.select(queryStr);
+    } else {
+      this.queryValue = this.queryValue.select('-__v');
+    }
+
+    return this;
+  }
 }
 
 export { ApiFeatures };
