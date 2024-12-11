@@ -9,7 +9,8 @@ const getCatalogs = catchAsync(async (req, res) => {
   const features = new ApiFeatures(Catalog.find(), req.query)
     .filter()
     .sort()
-    .fields();
+    .fields()
+    .pagination();
   const catalogs = await features.queryValue;
 
   res.status(200).json({
