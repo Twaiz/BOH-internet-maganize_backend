@@ -1,12 +1,17 @@
 //? Import ?\\
 import { Catalog } from '../Models';
-import { catchAsync } from '../Utils';
+import { ApiFeatures, catchAsync } from '../Utils';
 
 //? Public ?\\
 
 //? Get Catalogs *with Features* ?\\
-const getCatalogs = catchAsync(async (_req, res) => {
-  const catalogs = await Catalog.find();
+const getCatalogs = catchAsync(async (req, res) => {
+  const features = new ApiFeatures(Catalog.find(), req.query)
+    .filter()
+    .sort()
+    .fields()
+    .pagination();
+  const catalogs = await features.queryValue;
 
   res.status(200).json({
     status: 'success',

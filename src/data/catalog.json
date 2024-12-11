@@ -14,7 +14,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-LPBF48200-H.pdf"
       }
     ],
-    "price": "1850$",
+    "price": 1850,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -35,7 +36,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-LUX-E-48100LG04.pdf"
       }
     ],
-    "price": "1130$",
+    "price": 1130,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -56,7 +58,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-LPBA48200.pdf"
       }
     ],
-    "price": "2500$",
+    "price": 2500,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -73,7 +76,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-LUX-E-48100LG03.pdf"
       }
     ],
-    "price": "1180$",
+    "price": 1180,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -94,7 +98,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-LPBF24200-M.pdf"
       }
     ],
-    "price": "1100$",
+    "price": 1100,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -105,7 +110,8 @@
       "current": "170Ah",
       "voltage": "48V"
     },
-    "price": "1730$",
+    "price": 1730,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -126,7 +132,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-LPBF24100-M.pdf"
       }
     ],
-    "price": "560$",
+    "price": 560,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -137,7 +144,8 @@
       "current": "100Ah",
       "voltage": "51.2V"
     },
-    "price": "1300$",
+    "price": 1300,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -158,7 +166,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-RW-F10-6-Deye.pdf"
       }
     ],
-    "price": "1$",
+    "price": 1,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -179,7 +188,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-RW-M6-1-Deye.pdf"
       }
     ],
-    "price": "1760$",
+    "price": 1760,
+    "currency": "USD",
     "category": "onTheWall"
   },
   {
@@ -200,7 +210,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-LUX-E-48250LG03.pdf"
       }
     ],
-    "price": "2660$",
+    "price": 2660,
+    "currency": "USD",
     "category": "stationaryOnWheels"
   },
   {
@@ -221,7 +232,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-LPBF48300.pdf"
       }
     ],
-    "price": "2350$",
+    "price": 2350,
+    "currency": "USD",
     "category": "stationaryOnWheels"
   },
   {
@@ -242,7 +254,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-LUX-Y-48300LG01.pdf"
       }
     ],
-    "price": "3000$",
+    "price": 3000,
+    "currency": "USD",
     "category": "stationaryOnWheels"
   },
   {
@@ -263,7 +276,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-LPBF48350.pdf"
       }
     ],
-    "price": "3550$",
+    "price": 3550,
+    "currency": "USD",
     "category": "stationaryOnWheels"
   },
   {
@@ -280,7 +294,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-LPBF48500.pdf"
       }
     ],
-    "price": "4750$",
+    "price": 4750,
+    "currency": "USD",
     "category": "stationaryOnWheels"
   },
   {
@@ -297,7 +312,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-FLS-48100-C.pdf"
       }
     ],
-    "price": "1150$",
+    "price": 1150,
+    "currency": "USD",
     "category": "recruitment"
   },
   {
@@ -318,7 +334,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-LUX-X-48100LMG01.pdf"
       }
     ],
-    "price": "1100$",
+    "price": 1100,
+    "currency": "USD",
     "category": "recruitment"
   },
   {
@@ -335,7 +352,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-SE-G5.1-Pro-B-Deye.pdf"
       }
     ],
-    "price": "1330$",
+    "price": 1330,
+    "currency": "USD",
     "category": "recruitment"
   },
   {
@@ -352,7 +370,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-BOS-GM51-Deye.pdf"
       }
     ],
-    "price": "1400$",
+    "price": 1400,
+    "currency": "USD",
     "category": "recruitment"
   },
   {
@@ -363,7 +382,8 @@
       "current": "200Ah",
       "voltage": "38.4V"
     },
-    "price": "1$",
+    "price": 1,
+    "currency": "USD",
     "category": "recruitment"
   },
   {
@@ -381,7 +401,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-IVEM5048-LV.pdf"
       }
     ],
-    "price": "550$",
+    "price": 550,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -403,7 +424,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-IVEM8048-LV.pdf"
       }
     ],
-    "price": "950$",
+    "price": 950,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -424,7 +446,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-T-REX-5KLP1G01.pdf"
       }
     ],
-    "price": "1190$",
+    "price": 1190,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -445,7 +468,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-T-REX-10KLP3G01.pdf"
       }
     ],
-    "price": "2040$",
+    "price": 2040,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -466,7 +490,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-Apollo-5KLP1G01-MX.pdf"
       }
     ],
-    "price": "1500$",
+    "price": 1500,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -483,7 +508,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-SUN-12K-SG04LP3-EU.pdf"
       }
     ],
-    "price": "2800$",
+    "price": 2800,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -500,7 +526,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-SUN-50K-SG01HP3-EU-BM4.pdf"
       }
     ],
-    "price": "7200$",
+    "price": 7200,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -521,7 +548,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-06K-SG05LP1-EU-Deye-WiFi.pdf"
       }
     ],
-    "price": "1350$",
+    "price": 1350,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -542,7 +570,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-06K-SG05LP1-EU-Deye-WiFi.pdf"
       }
     ],
-    "price": "1390$",
+    "price": 1390,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -563,7 +592,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-08K-SG01LP1-EU-Deye-WiFi.pdf"
       }
     ],
-    "price": "2130$",
+    "price": 2130,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -584,7 +614,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-10K-SG02LP1-EU-AM3-Deye-WiFi.pdf"
       }
     ],
-    "price": "2500$",
+    "price": 2500,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -605,7 +636,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-10K-SG02LP1-EU-AM3-Deye-WiFi.pdf"
       }
     ],
-    "price": "2810$",
+    "price": 2810,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -622,7 +654,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-16K-SG05LP3-EU-SM2-Deye-WiFi.pdf"
       }
     ],
-    "price": "3700$",
+    "price": 3700,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -643,7 +676,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-20K-SG01HP3-EU-AM2-Deye-WiFi.pdf"
       }
     ],
-    "price": "2810$",
+    "price": 2810,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -660,7 +694,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-20K-SG05LP3-EU-SM2-Deye-WiFi.pdf"
       }
     ],
-    "price": "4450$",
+    "price": 4450,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -681,7 +716,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-30K-SG01HP3-EU-BM3-Deye-WiFi.pdf"
       }
     ],
-    "price": "5470$",
+    "price": 5470,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -702,7 +738,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-50K-SG01HP3-EU-BM4-Deye-WiFi.pdf"
       }
     ],
-    "price": "7230$",
+    "price": 7230,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -723,7 +760,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-100K-G03-Deye-WiFi.pdf"
       }
     ],
-    "price": "3920$",
+    "price": 3920,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -734,7 +772,8 @@
       "phase": "1 фаза",
       "mppt": "2 MMPT"
     },
-    "price": "680$",
+    "price": 680,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -745,7 +784,8 @@
       "phase": "3 фази",
       "mppt": "2 MMPT"
     },
-    "price": "680$",
+    "price": 680,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -762,7 +802,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-15K-G05-Deye-WiFi.pdf"
       }
     ],
-    "price": "980$",
+    "price": 980,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -783,7 +824,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-20-G04-Deye-WiFi.pdf"
       }
     ],
-    "price": "1080$",
+    "price": 1080,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -794,7 +836,8 @@
       "phase": "3 фази",
       "mppt": "2 MMPT"
     },
-    "price": "1170$",
+    "price": 1170,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -815,7 +858,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-SUN-30-G04-Deye-WiFi.pdf"
       }
     ],
-    "price": "1450$",
+    "price": 1450,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -826,7 +870,8 @@
       "phase": "3 фази",
       "mppt": "4 MMPT"
     },
-    "price": "2420$",
+    "price": 2420,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -837,7 +882,8 @@
       "phase": "3 фази",
       "mppt": "4 MMPT"
     },
-    "price": "3240$",
+    "price": 3240,
+    "currency": "USD",
     "category": "inverters"
   },
   {
@@ -855,7 +901,8 @@
         "link": "https://felec.com.ua/#:~:text=%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8%2DDHN%2D60X16%2DDG.pdf"
       }
     ],
-    "price": "102$",
+    "price": 102,
+    "currency": "USD",
     "category": "solarPanels"
   },
   {
@@ -872,7 +919,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-DHN-78X16-DG.pdf"
       }
     ],
-    "price": "160$",
+    "price": 160,
+    "currency": "USD",
     "category": "solarPanels"
   },
   {
@@ -889,7 +937,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-DHN-78X16-DG.pdf"
       }
     ],
-    "price": "155$",
+    "price": 155,
+    "currency": "USD",
     "category": "solarPanels"
   },
   {
@@ -906,7 +955,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-DHM-72X10.pdf"
       }
     ],
-    "price": "135$",
+    "price": 135,
+    "currency": "USD",
     "category": "solarPanels"
   },
   {
@@ -923,7 +973,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-DHN-54X16-FS.pdf"
       }
     ],
-    "price": "97$",
+    "price": 97,
+    "currency": "USD",
     "category": "solarPanels"
   },
   {
@@ -940,7 +991,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-DHN-54X16-FS-435.pdf"
       }
     ],
-    "price": "98$",
+    "price": 98,
+    "currency": "USD",
     "category": "solarPanels"
   },
   {
@@ -951,7 +1003,8 @@
       "weight": "23.5 кг",
       "amperage": "30 Ампер"
     },
-    "price": "93$",
+    "price": 93,
+    "currency": "USD",
     "category": "solarPanels"
   },
   {
@@ -962,7 +1015,8 @@
       "amperage": "3 Ампер",
       "size": "1280х550х4 мм"
     },
-    "price": "158$",
+    "price": 158,
+    "currency": "USD",
     "category": "solarPanels"
   },
   {
@@ -979,7 +1033,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-KBE-Solar-DB.pdf"
       }
     ],
-    "price": "640$",
+    "price": 640,
+    "currency": "USD",
     "category": "switching"
   },
   {
@@ -996,7 +1051,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-HVB750V-100A-EU-Deye.pdf"
       }
     ],
-    "price": "1120$",
+    "price": 1120,
+    "currency": "USD",
     "category": "components"
   },
   {
@@ -1007,7 +1063,8 @@
       "size": "187 мм",
       "stacking": "макс. укладання 4 поверхи"
     },
-    "price": "26$",
+    "price": 26,
+    "currency": "USD",
     "category": "components"
   },
   {
@@ -1018,7 +1075,8 @@
       "mobility": "легко переміщати",
       "portability": "портативна"
     },
-    "price": "117$",
+    "price": 117,
+    "currency": "USD",
     "category": "components"
   },
   {
@@ -1035,7 +1093,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-3U-HRACK-Deye.pdf"
       }
     ],
-    "price": "490$",
+    "price": 490,
+    "currency": "USD",
     "category": "components"
   },
   {
@@ -1052,7 +1111,8 @@
         "link": "https://felec.com.ua/docs/%D0%86%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D1%96%D1%97-3U-HRACK-Deye.pdf"
       }
     ],
-    "price": "400$",
+    "price": 400,
+    "currency": "USD",
     "category": "components"
   },
   {
@@ -1063,7 +1123,8 @@
       "capacity": "307 Вт-год",
       "weight": "4,3 кг"
     },
-    "price": "220$",
+    "price": 220,
+    "currency": "USD",
     "category": "portableChargingStations"
   },
   {
@@ -1084,7 +1145,8 @@
         "link": "https://felec.com.ua/docs/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-Al-W5-1-B-Deye.pdf"
       }
     ],
-    "price": "3510$",
+    "price": 3510,
+    "currency": "USD",
     "category": "energyStorageSystems"
   },
   {
@@ -1095,7 +1157,8 @@
       "current": "100Ah",
       "voltage": "51,2V"
     },
-    "price": "1$",
+    "price": 1,
+    "currency": "USD",
     "category": "energyStorageSystems"
   }
 ]
