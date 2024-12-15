@@ -1,6 +1,8 @@
-import { User } from 'Models';
-import { AppError, catchAsync } from 'Utils';
+import { NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
+
+import { User, IUser } from 'Models';
+import { AppError, catchAsync } from 'Utils';
 
 const jwtVerifyPromisified = (token: string, secret: string) => {
   return new Promise((resolve, reject) => {
@@ -97,4 +99,16 @@ const protect = catchAsync(async (req, _res, next) => {
   next();
 });
 
-export { protect };
+const restrictTo = (...roles: string[]) => {
+  return (req: { user: IUser }, next: NextFunction) => {
+    if (!roles.includes(req.user.role)) {
+      return next(
+        new AppError('You do not have permission to perform this action', 403),
+      );
+    }
+
+    next();
+  };
+};
+
+export { protect, restrictTo };
