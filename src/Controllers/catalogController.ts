@@ -3,6 +3,22 @@ import { Catalog } from '../Models';
 import { ApiFeatures, catchAsync } from '../Utils';
 
 //? Public ?\\
+// enum TypesRole {
+//   USER = 'user',
+//   EDITOR = 'editor',
+//   ADMIN = 'admin',
+// }
+
+interface IUser {
+  name: string;
+  email: string;
+  password: string;
+  passwordConfirm?: string | undefined;
+  role: 'user' | 'editor' | 'admin';
+  passwordChangedAt?: Date;
+  passwordResetToken?: string;
+  passwordResetExpires?: Date;
+}
 
 //? Get Catalogs *with Features* ?\\
 const getCatalogs = catchAsync(async (req, res) => {
@@ -29,4 +45,4 @@ const getCatalogs = catchAsync(async (req, res) => {
 //? Update Product in DB ?\\
 //? Delete Product, Products in DB ?\\
 
-export { getCatalogs };
+export { getCatalogs, IUser };
