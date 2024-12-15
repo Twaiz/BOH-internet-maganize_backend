@@ -1,2 +1,2 @@
 export { Catalog } from './catalogModel';
-export { User } from './userModel';
+export { User, IUser } from './userModel';
