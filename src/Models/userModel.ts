@@ -65,11 +65,11 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-userSchema.methods['correctPassword'] = async function (
+const correctPassword = async function (
   candidatePassword: string,
   userPassword: string,
 ) {
-  return bcrypt.compare(candidatePassword, userPassword);
+  return await bcrypt.compare(candidatePassword, userPassword);
 };
 
 userSchema.methods['passwordChangedAfter'] = function (JWTTimeGet: number) {
@@ -83,4 +83,4 @@ userSchema.methods['passwordChangedAfter'] = function (JWTTimeGet: number) {
 
 const User = mongoose.model<IUser>('User', userSchema);
 
-export { User, IUser };
+export { User, IUser, correctPassword };
