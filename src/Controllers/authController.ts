@@ -1,9 +1,49 @@
-import { NextFunction } from 'express';
+//? Imports
+import { NextFunction, Response } from 'express';
 import jwt from 'jsonwebtoken';
 
-import { User, IUser } from 'Models';
-import { AppError, catchAsync } from 'Utils';
+import { User, IUser } from '../Models';
+import { AppError, catchAsync } from '../Utils';
 
+const singToken = (id: string) => {
+  const jwtSecretKey = process.env['JWT_SECRET'];
+  const jwtExpiresIn = process.env['JWT_EXPIRES_IN'];
+  if (!jwtSecretKey || !jwtExpiresIn) {
+    console.log('jwtSecretKey and jwtExpiresIn is not defined');
+    return;
+  }
+
+  return jwt.sign({ id }, jwtSecretKey, {
+    expiresIn: jwtExpiresIn,
+  });
+};
+
+const sendJwtToken = (
+  user: IUser,
+  statusCode: number,
+  res: Response,
+  message: string = '',
+) => {
+  const token = singToken(user.id);
+
+  if (!token) {
+    return res.status(500).json({
+      status: 'error',
+      message: 'Error generating token',
+    });
+  }
+
+  res.status(statusCode).json({
+    status: 'success',
+    message,
+    token,
+    data: {
+      user,
+    },
+  });
+};
+
+//? Verification functions
 const jwtVerifyPromisified = (token: string, secret: string) => {
   return new Promise((resolve, reject) => {
     jwt.verify(token, secret, {}, (err, payload) => {
@@ -111,4 +151,18 @@ const restrictTo = (...roles: string[]) => {
   };
 };
 
-export { protect, restrictTo };
+//? Functions
+const signUp = catchAsync(async (req, res) => {
+  const { name, email, password, passwordConfirm, role } = req.body;
+  const newUser = await User.create({
+    name,
+    email,
+    password,
+    passwordConfirm,
+    role,
+  });
+
+  sendJwtToken(newUser, 201, res, 'Account has been success created!');
+});
+
+export { protect, restrictTo, signUp };
