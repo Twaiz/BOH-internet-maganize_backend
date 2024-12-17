@@ -2,7 +2,7 @@
 import { NextFunction, Response } from 'express';
 import jwt from 'jsonwebtoken';
 
-import { User, IUser } from '../Models';
+import { User, IUser, correctPassword } from '../Models';
 import { AppError, catchAsync } from '../Utils';
 
 const singToken = (id: string) => {
@@ -165,4 +165,23 @@ const signUp = catchAsync(async (req, res) => {
   sendJwtToken(newUser, 201, res, 'Account has been success created!');
 });
 
-export { protect, restrictTo, signUp };
+const logIn = catchAsync(async (req, res, next) => {
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ email }).select('+password');
+  const isCorrectPassword =
+    user && (await correctPassword(password, user.password));
+
+  if (!user || !isCorrectPassword) {
+    return next(new AppError('Incorrect email or password!', 401));
+  }
+
+  sendJwtToken(
+    user,
+    200,
+    res,
+    'You have successfully logged into your account!',
+  );
+});
+
+export { protect, restrictTo, signUp, logIn };
