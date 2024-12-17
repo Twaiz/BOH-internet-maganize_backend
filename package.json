@@ -22,7 +22,7 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "dev:product": "cross-env NODE_ENV=production nodemon server.ts"
+    "dev:product": "cross-env NODE_ENV=production ts-node-dev --respawn --transpile-only src/server.ts"
   },
   "husky": {
     "hooks": {
