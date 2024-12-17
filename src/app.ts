@@ -4,12 +4,13 @@ import morgan from 'morgan';
 
 import { AppError } from './Utils';
 import { globalErrorHandler } from './Controllers';
-import { catalogRoute } from './Routes';
+import { authRoute, catalogRoute } from './Routes';
 
 const app = express();
 
 // //?Varibles?\\
 const URL_CATALOG = '/api/v1/catalog';
+const URL_USERS = '/api/v1/users';
 
 //?Middlewares?\\
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use(morgan('dev'));
 
 // //?Routes?\\
 app.use(URL_CATALOG, catalogRoute);
+app.use(URL_USERS, authRoute);
 
 //?Error Handling -> Not Found Route?\\
 app.all('*', (req, _res, next) => {
