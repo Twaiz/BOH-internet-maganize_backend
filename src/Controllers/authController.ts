@@ -153,13 +153,23 @@ const restrictTo = (...roles: string[]) => {
 
 //? Functions
 const signUp = catchAsync(async (req, res) => {
-  const { name, email, password, passwordConfirm, role } = req.body;
-  const newUser = await User.create({
+  const {
     name,
+    surname,
     email,
     password,
     passwordConfirm,
     role,
+    receiveAdvertising,
+  } = req.body;
+  const newUser = await User.create({
+    name,
+    surname,
+    email,
+    password,
+    passwordConfirm,
+    role,
+    receiveAdvertising,
   });
 
   sendJwtToken(newUser, 201, res, 'Account has been success created!');

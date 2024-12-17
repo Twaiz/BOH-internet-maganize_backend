@@ -10,10 +10,12 @@ enum TypesRole {
 
 interface IUser {
   name: string;
+  surname: string;
   email: string;
   password: string;
   passwordConfirm?: string | undefined;
   role: TypesRole;
+  receiveAdvertising: boolean;
   passwordChangedAt?: Date;
   passwordResetToken?: string;
   passwordResetExpires?: Date;
@@ -22,6 +24,7 @@ interface IUser {
 
 const userSchema = new Schema<IUser>({
   name: { type: String, required: true },
+  surname: { type: String, required: true },
   email: {
     type: String,
     required: true,
@@ -46,6 +49,7 @@ const userSchema = new Schema<IUser>({
     enum: Object.values(TypesRole),
     default: TypesRole.USER,
   },
+  receiveAdvertising: { type: Boolean, required: true, default: false },
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetExpires: Date,
