@@ -6,9 +6,9 @@ import { getCatalogs } from '../Controllers';
 
 const route = express.Router();
 /* RCUD (CRUD):
- 1. Get products:
+//  1. Get products:
   // get products
-  get product with features
+  // get product with features
  2. Add product
  3. Update product
  4. Delete product

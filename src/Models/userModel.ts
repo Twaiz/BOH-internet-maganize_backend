@@ -17,6 +17,7 @@ interface IUser {
   passwordChangedAt?: Date;
   passwordResetToken?: string;
   passwordResetExpires?: Date;
+  id: string;
 }
 
 const userSchema = new Schema<IUser>({
@@ -43,6 +44,7 @@ const userSchema = new Schema<IUser>({
     type: String,
     required: true,
     enum: Object.values(TypesRole),
+    default: TypesRole.USER,
   },
   passwordChangedAt: Date,
   passwordResetToken: String,
@@ -56,7 +58,7 @@ userSchema.pre('save', async function (next) {
   this.password = await bcrypt.hash(this.password, 12);
   this.passwordConfirm = undefined;
 
-  if (!this.isNew) {
+  if (this.isNew) {
     this.passwordChangedAt = new Date(Date.now() - 1000);
   }
 
