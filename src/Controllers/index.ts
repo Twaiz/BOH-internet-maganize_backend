@@ -6,4 +6,5 @@ export {
   signUp,
   logIn,
   forgotPassword,
+  resetPassword,
 } from './authController';

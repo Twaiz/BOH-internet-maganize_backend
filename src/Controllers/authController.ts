@@ -1,6 +1,7 @@
 //? Imports
 import { NextFunction, Response } from 'express';
 import jwt from 'jsonwebtoken';
+import crypto from 'crypto';
 
 import { User, IUser, correctPassword } from '../Models';
 import { AppError, catchAsync, sendEmail } from '../Utils';
@@ -203,6 +204,7 @@ const forgotPassword = catchAsync(async (req, res, next) => {
   }
 
   const resetToken = user.createPasswordResetToken();
+  console.log(resetToken);
   await user.save({ validateBeforeSave: false });
 
   const resetURL = `${req.protocol}://${req.get(
@@ -236,4 +238,40 @@ const forgotPassword = catchAsync(async (req, res, next) => {
   }
 });
 
-export { protect, restrictTo, signUp, logIn, forgotPassword };
+const resetPassword = catchAsync(async (req, res, next) => {
+  const token = req.params['token'];
+  if (!token) {
+    console.log('Token is not defined');
+    return;
+  }
+
+  const hashedResetToken = crypto
+    .createHash('sha256')
+    .update(token)
+    .digest('hex');
+
+  console.log(hashedResetToken);
+
+  const user = await User.findOne({
+    passwordResetToken: hashedResetToken,
+    passwordResetExpires: { $gt: Date.now() },
+  });
+
+  if (!user) {
+    return next(new AppError('Token is invalid or has expired', 400));
+  }
+
+  const reqPassword = req.body.password;
+
+  user.password = reqPassword;
+  user.passwordConfirm = reqPassword;
+  user.passwordChangedAt = new Date(Date.now());
+  user.passwordResetToken = undefined;
+  user.passwordResetExpires = undefined;
+
+  await user.save();
+
+  sendJwtToken(user, 200, res, 'Password added successfully!');
+});
+
+export { protect, restrictTo, signUp, logIn, forgotPassword, resetPassword };
