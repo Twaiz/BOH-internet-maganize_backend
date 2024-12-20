@@ -1,6 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 import validator from 'validator';
 import bcrypt from 'bcrypt';
+import crypto from 'crypto';
 
 enum TypesRole {
   USER = 'user',
@@ -17,9 +18,10 @@ interface IUser {
   role: TypesRole;
   receiveAdvertising: boolean;
   passwordChangedAt?: Date;
-  passwordResetToken?: string;
-  passwordResetExpires?: Date;
+  passwordResetToken?: string | undefined;
+  passwordResetExpires?: Date | undefined;
   id: string;
+  createPasswordResetToken: () => string;
 }
 
 const userSchema = new Schema<IUser>({
@@ -51,8 +53,8 @@ const userSchema = new Schema<IUser>({
   },
   receiveAdvertising: { type: Boolean, required: true, default: false },
   passwordChangedAt: Date,
-  passwordResetToken: String,
-  passwordResetExpires: Date,
+  passwordResetToken: String || undefined,
+  passwordResetExpires: Date || undefined,
 });
 
 //? Functions ?\\
@@ -83,6 +85,19 @@ userSchema.methods['passwordChangedAfter'] = function (JWTTimeGet: number) {
   }
 
   return false;
+};
+
+userSchema.methods['createPasswordResetToken'] = function () {
+  const resetToken = crypto.randomBytes(32).toString('hex');
+
+  this['passwordResetToken'] = crypto
+    .createHash('sha256')
+    .update(resetToken)
+    .digest('hex');
+
+  this['passwordResetExpires'] = new Date(Date.now() + 10 * 60 * 1000);
+
+  return resetToken;
 };
 
 const User = mongoose.model<IUser>('User', userSchema);
