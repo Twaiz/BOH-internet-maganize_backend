@@ -6,6 +6,8 @@ import {
   resetPassword,
   updatePassword,
   protect,
+  getMe,
+  getUser,
 } from '../Controllers';
 
 const route = express.Router();
@@ -19,5 +21,7 @@ route.post('/resetPassword/:token', resetPassword);
 route.use(protect);
 
 route.patch('/updatePassword', updatePassword);
+
+route.get('/me', getMe, getUser);
 
 export { route as authRoute };

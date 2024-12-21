@@ -1,2 +1,2 @@
 export { catalogRoute } from './catalogRoutes';
-export { authRoute } from './authRoutes';
+export { authRoute } from './userRoutes';
