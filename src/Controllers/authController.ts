@@ -274,4 +274,38 @@ const resetPassword = catchAsync(async (req, res, next) => {
   sendJwtToken(user, 200, res, 'Password added successfully!');
 });
 
-export { protect, restrictTo, signUp, logIn, forgotPassword, resetPassword };
+const updatePassword = catchAsync(async (req, res, next) => {
+  const { passwordCurrent, password, passwordConfirm } = req.body;
+  console.log(req.user);
+  const userId = req.user.id;
+
+  const user = await User.findById(userId).select('+password');
+  if (!user) {
+    return next(new AppError('User is not defined', 400));
+  }
+
+  const isCorrectPassword = await correctPassword(
+    passwordCurrent,
+    user.password,
+  );
+  if (!isCorrectPassword) {
+    return next(new AppError('Your current password is wrong!', 401));
+  }
+
+  user.password = password;
+  user.passwordConfirm = passwordConfirm;
+
+  await user.save();
+
+  sendJwtToken(user, 200, res, 'Password successfully updated!');
+});
+
+export {
+  protect,
+  restrictTo,
+  signUp,
+  logIn,
+  forgotPassword,
+  resetPassword,
+  updatePassword,
+};
