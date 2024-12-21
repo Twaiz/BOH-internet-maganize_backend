@@ -8,6 +8,7 @@ import {
   protect,
   getMe,
   getUser,
+  updateMe,
 } from '../Controllers';
 
 const route = express.Router();
@@ -23,5 +24,6 @@ route.use(protect);
 route.patch('/updatePassword', updatePassword);
 
 route.get('/me', getMe, getUser);
+route.patch('/updateMe', getMe, updateMe);
 
 export { route as authRoute };
