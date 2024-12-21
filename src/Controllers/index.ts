@@ -9,5 +9,5 @@ export {
   resetPassword,
   updatePassword,
 } from './authController';
-export { getMe, getUser } from './userController';
+export { getMe, getUser, updateMe } from './userController';
 export { factory } from './handlerController';
